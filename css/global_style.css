@@ -1,0 +1,434 @@
+/* start global setting */
+* {
+  margin: 0;
+  border: none;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: font-Regular;
+}
+
+:root {
+  --mainC1: #115b8a;
+  --mainC2: #193eb8;
+  --mainC3: #3bab46;
+  --secondC: #222222;
+  --footC: #082c46;
+  --fC1: #0c5991;
+  --fC2: #eee;
+  --whC: #fff;
+  --overC1: rgba(0, 0, 0, 0.4);
+  --overC2: rgba(0, 0, 0, 0.716);
+  --tr: all 0.5s linear;
+  --f1: 45px;
+  --f2: 40px;
+  --f3: 25px;
+  --f4: 20px;
+  --f5: 18px;
+  --f6: 14px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* start custom classes from project */
+.container-custom {
+  width: 80%;
+  margin: auto;
+}
+
+/*start  btn class */
+.btn {
+  padding: 8px 30px;
+  border-radius: 9px;
+  font-size: 15px;
+  border: 1px solid #193eb8 !important;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.btn a {
+  color: #fff !important;
+  font-size: 17px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #193eb8 !important;
+}
+
+
+.btn:hover a {
+  color: #fff !important;
+}
+
+.btn-type2 {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: var(--mainC2);
+  padding: 10px 20px;
+  text-align: center;
+  color: var(--whC);
+  font-weight: bold;
+  border-radius: 10px;
+  transition: var(--tr);
+}
+
+.btn-type2:hover {
+  background-color: transparent;
+  color: var(--mainC2);
+  border: 1px solid var(--mainC2);
+}
+
+.padding-sec {
+  padding: 60px 0;
+}
+
+/*start title class*/
+.title {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 100px !important;
+  color: #fff;
+  padding: 10px 50px;
+  background-color: #193eb8;
+  width: fit-content;
+  margin: auto;
+  border-radius: 3px;
+  position: relative;
+  z-index: 100;
+}
+
+
+
+/* start title-black */
+/* end title-black */
+
+.title2 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 100px !important;
+  color: #fff;
+  padding: 8px 30px;
+  border: 1px solid #fff;
+  width: fit-content;
+  margin: auto;
+  border-radius: 0;
+  position: relative;
+  z-index: 100;
+}
+.title2:hover {
+  color: #000;
+  border-color: #000;
+  transition-delay: 0.5s;
+}
+.title2::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #193eb8;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.title2::after {
+  content: '';
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  background-color: #193eb8;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.title2:hover::after {
+  animation: toleft 0.5s linear forwards;
+  z-index: -1;
+}
+.title2:hover::before {
+  animation: toright 0.5s linear forwards;
+  z-index: -1;
+}
+
+/* start overlay class */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.464);
+}
+
+
+.text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.155);
+  border-radius: 20px;
+  padding: 80px;
+  width: 50%;
+  margin: 50px auto;
+}
+.text h1 {
+  font-size: var(--f1);
+  color: var(--fC2);
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0px 2px 8px var(--overC1);
+}
+
+.text h3 {
+  font-size: 18px;
+  text-align: center;
+  color: var(--whC);
+}
+
+@media (max-width: 991px) {
+  .text {
+    border-radius: 20px;
+    padding: 20px;
+    padding-bottom: 50px;
+    width: 80%;
+  }
+
+  .text h1 {
+    /* margin-top: 50px; */
+    font-size: 30px
+  }
+
+  .text h3 {
+    margin-right: 30px;
+  }
+}
+
+/* start img-reset class */
+.img-reset {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center;
+}
+
+/* end custom classes from project */
+/*@@ start fonts @@*/
+@font-face {
+  font-family: font-bold;
+  src: url(../fonts/ArbFONTS-DINNextLTArabic-Bold-2.ttf);
+}
+
+@font-face {
+  font-family: font-heavy;
+  src: url(../fonts/ArbFONTS-DINNextLTArabic-Heavy-1.ttf);
+}
+
+@font-face {
+  font-family: font-LIGHT;
+  src: url(../fonts/ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf);
+}
+
+@font-face {
+  font-family: font-Medium;
+  src: url(../fonts/ArbFONTS-DINNextLTArabic-Medium-3.ttf);
+}
+
+@font-face {
+  font-family: font-Regular;
+  src: url(../fonts/ArbFONTS-DINNextLTArabic-Regular-2.ttf);
+}
+
+@font-face {
+  font-family: font-UltraLight;
+  src: url(../fonts/ArbFONTS-DINNextLTArabic-UltraLight-1.ttf);
+}
+
+/*@@ end fonts @@*/
+
+/* end global setting */
+
+
+/* section  .nav-scroll-scrroll */
+header .nav-scroll {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  overflow: hidden;
+  margin: 0 auto;
+  z-index: 1000;
+  width: 100% !important;
+  left: 0;
+  border-radius: 0;
+  position: fixed;
+  top:50px;
+  padding: 20px 100px;
+}
+
+.nav-scroll .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .nav-scroll .content .box {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-scroll .content .brand img {
+  width: 80px;
+  height: 50px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+header .nav-scroll .content ul {
+  display: flex;
+  gap: 50px;
+  padding-left: 10px;
+}
+
+header .nav-scroll .content ul li a {
+  color: #fff;
+  font-size: var(--f6);
+  font-size: 17px;
+}
+
+header .nav-scroll .content ul li {
+  transition: var(--tr);
+  position: relative;
+}
+
+header .nav-scroll .content ul li::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2.5px;
+  bottom: -27px;
+  background-color: var(--mainC2);
+  position: absolute;
+  transition: var(--tr);
+}
+
+header .nav-scroll .content ul li:hover::after {
+  width: 100%;
+}
+
+header .nav-scroll .content ul li:hover a {
+  color: var(--mainC2);
+}
+
+header .nav-scroll .content .bar {
+  display: none;
+  font-size: var(--f3);
+  padding-left: 13px;
+}
+
+header .nav-scroll .content .bar a {
+  color: var(--mainC2);
+  transition: var(--tr);
+}
+
+header .nav-scroll .content .bar a:hover {
+  color: var(--mainC3);
+}
+
+/* @@start media header setting */
+@media (max-width: 991px) {
+  header {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+  }
+
+  header .nav-scroll {
+    background-color: rgba(0, 0, 0, 0.686);
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px 30px;
+    box-shadow: 1px 4px 12px 0px var(--overC1);
+    -webkit-box-shadow: 1px 4px 12px 0px var(--overC1);
+    -moz-box-shadow: 1px 4px 12px 0px var(--overC1);
+  }
+
+  header .nav-scroll .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header .nav-scroll .content .box {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .nav-scroll .content .brand img {
+    width: 80px;
+    height: 50px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  header .nav-scroll .content ul {
+    display: none
+  }
+
+  header .nav-scroll .content ul li a {
+    color: #fff;
+    font-size: var(--f6);
+    font-size: 17px;
+  }
+
+  header .nav-scroll .content .login {
+    display: none;
+  }
+
+  header .nav-scroll .content ul li {
+    transition: var(--tr);
+    position: relative;
+  }
+
+  header .nav-scroll .content ul li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2.5px;
+    bottom: -27px;
+    background-color: var(--mainC2);
+    position: absolute;
+    transition: var(--tr);
+  }
+
+  header .nav-scroll .content ul li:hover::after {
+    width: 100%;
+  }
+
+  header .nav-scroll .content ul li:hover a {
+    color: var(--mainC2);
+  }
+
+  header .nav-scroll .content .bar {
+    display: block
+  }
+
+  header .nav-scroll .content .bar a {
+    color: var(--mainC2);
+    transition: var(--tr);
+  }
+
+  header .nav-scroll .content .bar a:hover {
+    color: var(--mainC3);
+  }
+}
